@@ -71,3 +71,48 @@ for scale in scale_values:
                 terrain_normalized = normalize_terrain(terrain)
                 visualize_terrain(terrain_normalized, colormap=aurora_colormap)
 
+"""
+Importing Libraries:
+
+The code begins by importing necessary libraries:
+numpy (as np) for numerical operations.
+OpenSimplex from the opensimplex module for generating Perlin noise.
+matplotlib.pyplot (as plt) for visualization.
+LinearSegmentedColormap from matplotlib.colors for creating a custom colormap.
+Function Definitions:
+
+generate_terrain: This function generates Perlin noise to create terrain.
+
+It takes parameters such as width, height, scale, octaves, persistence, lacunarity, and seed.
+It initializes an array terrain with zeros of size (width, height).
+Using the OpenSimplex object gen, it generates Perlin noise at each point in the array using nested loops.
+It returns the generated terrain.
+normalize_terrain: This function normalizes the generated terrain to be within the range [0, 1].
+
+It takes the terrain array as input.
+It calculates the normalized terrain using numpy operations and returns it.
+visualize_terrain: This function visualizes the terrain using Matplotlib.
+
+It takes the terrain array and a colormap function as input.
+It uses Matplotlib's imshow() function to display the terrain with the specified colormap.
+It adds a colorbar to the plot and displays it.
+aurora_colormap: This function defines a custom colormap for the aurora effect.
+
+It creates a colormap using colors defined in a list and returns it.
+Setting Parameters:
+
+The code sets up parameters for generating and visualizing the initial terrain:
+width and height determine the dimensions of the terrain grid.
+scale, octaves, persistence, lacunarity, and seed are parameters for generating the initial terrain.
+Generating and Visualizing Initial Terrain:
+
+The code generates terrain using the generate_terrain function with the specified parameters.
+It normalizes the terrain using the normalize_terrain function.
+It visualizes the normalized terrain using the visualize_terrain function with the custom colormap.
+Experimentation Loop:
+
+The code then sets up a nested loop to iterate over different combinations of parameters for scale, octaves, persistence, and lacunarity.
+For each combination, it generates terrain, normalizes it, and visualizes it using the same visualize_terrain function.
+This loop allows for experimenting with different parameter values to observe their effects on the generated terrain.
+
+"""
