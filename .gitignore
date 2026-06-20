@@ -1,0 +1,11 @@
+# Virtual environment
+venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Local generated files (root level only)
+/terrain*.png
+/*.obj
+/config.json
